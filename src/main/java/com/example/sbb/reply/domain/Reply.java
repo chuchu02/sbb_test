@@ -18,7 +18,6 @@ public class Reply {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(columnDefinition = "TEXT")
     private String content;
 
     private LocalDateTime createDate;
