@@ -25,8 +25,6 @@ public class Article {
 
     private LocalDateTime createDate;
 
-    private String hitcount;
-
     @OneToMany(mappedBy = "article", cascade = CascadeType.REMOVE)
     private List<Reply> ReplyList;
 }
