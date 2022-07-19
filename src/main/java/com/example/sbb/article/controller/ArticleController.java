@@ -28,7 +28,7 @@ public class ArticleController {
     public String detail(Model model, @PathVariable("id") Integer id) {
         Article article = this.articleService.getArticle(id);
         model.addAttribute("article", article);
-
+        // 조회수 기능 구현
         return "article_detail";
     }
 }

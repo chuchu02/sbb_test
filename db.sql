@@ -50,5 +50,6 @@ create_date = NOW(),
 content = '답변내용 3',
 article_id = 3;
 
+ALTER TABLE Article ADD view_count INT(11) DEFAULT 0;
 SELECT * FROM Article;
 SELECT * FROM Reply;
