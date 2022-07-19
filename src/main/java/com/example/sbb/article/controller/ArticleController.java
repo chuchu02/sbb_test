@@ -2,6 +2,7 @@ package com.example.sbb.article.controller;
 
 import com.example.sbb.article.domain.Article;
 import com.example.sbb.article.service.ArticleService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("article")
+@AllArgsConstructor
 public class ArticleController {
     @Autowired
     private ArticleService articleService;

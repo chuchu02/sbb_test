@@ -24,6 +24,7 @@ public class ArticleService {
         if (opArticle.isPresent()) {
             Article article = opArticle.get();
             article.setViewCount(article.getViewCount() + 1);
+            this.articleRepository.save(article);
             return article;
         } else {
             throw new DataNotFoundException("article not found");

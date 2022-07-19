@@ -19,8 +19,10 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(length = 200)
     private String subject;
 
+    @Column(columnDefinition = "TEXT")
     private String content;
 
     private LocalDateTime createDate;
@@ -28,5 +30,5 @@ public class Article {
     private int viewCount;
 
     @OneToMany(mappedBy = "article", cascade = CascadeType.REMOVE)
-    private List<Reply> ReplyList;
+    private List<Reply> replyList;
 }

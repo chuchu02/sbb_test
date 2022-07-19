@@ -21,7 +21,8 @@ public class ReplyService {
         reply.setArticle(article);
         reply.setReplyLike(false);
         this.replyRepository.save(reply);
-        }
+    }
+
     public void setLike(Integer replyId) {
         Reply reply = replyRepository.findById(replyId).get();
         if(reply.getReplyLike() == true) {
@@ -29,7 +30,6 @@ public class ReplyService {
         } else {
             reply.setReplyLike(true);
         }
-        this.replyRepository.save(reply);
     }
     }
 
